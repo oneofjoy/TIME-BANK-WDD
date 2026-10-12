@@ -1,0 +1,40 @@
+.site-navbar {
+    position: relative;
+    top: 0;
+    z-index: 1000;
+
+    width: calc(100% - 80px);
+    max-width: 1280px;
+    height: 84px;
+    margin: 20px auto 0;
+    padding: 0 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(154, 154, 153, 0.92);
+    border: 1px solid rgba(53, 159, 160, 0.15);
+    border-radius: 20px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-sizing: border-box;
+}
+
+.site-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.site-logo {
+    display: block;
+    width: auto;
+    height: 72px;
+    max-width: 180px;
+    object-fit: contain;
+}
