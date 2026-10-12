@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="hero-illustration" viewBox="0 0 560 440" role="img" aria-labelledby="hero-art-title hero-art-desc">
+                <title id="hero-art-title">Learning grows when we share</title>
+                <desc id="hero-art-desc">Two people share ideas and learn together across a desk, surrounded by a book, a clock, and a growing plant.</desc>
+                <rect x="18" y="28" width="524" height="384" rx="70" fill="#f0f8f6" />
+                <circle cx="305" cy="200" r="148" fill="#8ad6d1" opacity=".45" />
+                <path d="M56 341c20-40 33-79 25-110" fill="none" stroke="#176d70" stroke-width="4" stroke-linecap="round" />
+                <path d="M77 288c-33 1-46-13-40-32 26-2 43 10 40 32M82 265c25-8 32-25 25-40-25 5-32 20-25 40" fill="#359fa0" />
+                <path d="M42 329h53l-8 48H50z" fill="#fff0c5" />
+                <rect x="71" y="61" width="122" height="76" rx="16" fill="white" stroke="#d9e6e4" />
+                <path d="M93 82h33c10 0 14 6 14 6s4-6 14-6h18v32h-22c-7 0-10 5-10 5s-4-5-11-5H93z" fill="#fff0c5" stroke="#176d70" stroke-width="2.5" stroke-linejoin="round" />
+                <path d="M140 89v26M101 91h21M101 99h17M150 92h14M150 100h14" stroke="#176d70" stroke-width="2" stroke-linecap="round" />
+                <circle cx="455" cy="107" r="45" fill="#fff0c5" />
+                <circle cx="455" cy="107" r="29" fill="white" stroke="#176d70" stroke-width="2.5" />
+                <path d="M455 89v19l13 8" fill="none" stroke="#176d70" stroke-width="3" stroke-linecap="round" />
+                <path d="M232 82c48-25 103-18 143 13" fill="none" stroke="#359fa0" stroke-width="2.5" stroke-dasharray="5 8" stroke-linecap="round" />
+                <path d="m363 79 14 17-23 2" fill="none" stroke="#359fa0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                <rect x="111" y="280" width="77" height="97" rx="20" fill="#359fa0" />
+                <path d="M154 270v105M159 375l-24 26M164 375l28 26" stroke="#12363d" stroke-width="10" stroke-linecap="round" />
+                <path d="M154 228c-18 28-18 59-4 76h63l17-20-43-31" fill="#ff8c52" />
+                <path d="M161 306h44l31 61" fill="none" stroke="#12363d" stroke-width="23" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="m227 371 28 2" stroke="#176d70" stroke-width="12" stroke-linecap="round" />
+                <path d="M188 226c-9-4-18 1-19 12l3 26" fill="none" stroke="#f3c9ad" stroke-width="16" stroke-linecap="round" />
+                <circle cx="179" cy="190" r="28" fill="#f3c9ad" />
+                <path d="M152 192c-8-23 5-39 24-40 26-2 39 15 35 35-12 0-20-7-27-17-5 17-15 23-32 22" fill="#12363d" />
+                <path d="M184 249 218 270l30-12" fill="none" stroke="#f3c9ad" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" />
+                <rect x="380" y="280" width="74" height="97" rx="20" fill="#fff0c5" />
+                <path d="M416 291v84M411 375l-25 26M417 375l29 26" stroke="#12363d" stroke-width="10" stroke-linecap="round" />
+                <path d="M390 226c25 6 44 35 41 79h-70l-10-30" fill="#176d70" />
+                <path d="M410 307h-43l-31 62" fill="none" stroke="#12363d" stroke-width="23" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="m338 372-26 1" stroke="#359fa0" stroke-width="12" stroke-linecap="round" />
+                <path d="M386 223v20" stroke="#b97c5d" stroke-width="16" stroke-linecap="round" />
+                <circle cx="385" cy="190" r="28" fill="#b97c5d" />
+                <path d="M359 184c-6-31 30-48 50-29 12 11 14 29 8 39-4-5-11-9-19-11-5-15-10-19-17-20-2 16-9 23-22 21" fill="#12363d" />
+                <path d="m384 252-35 21-29-15" fill="none" stroke="#b97c5d" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" />
+                <rect x="194" y="278" width="183" height="12" rx="6" fill="#12363d" />
+                <path d="m209 289-9 98M361 289l10 98" stroke="#176d70" stroke-width="8" stroke-linecap="round" />
+                <path d="m249 247 13 28h50l-12-28z" fill="#fff0c5" stroke="#176d70" stroke-width="2" />
+                <path d="M250 274h69" stroke="#176d70" stroke-width="3" stroke-linecap="round" />
+                <rect x="275" y="163" width="55" height="42" rx="13" fill="white" />
+                <path d="m282 201-4 10 15-8" fill="white" />
+                <path d="m289 184 8 8 15-17" fill="none" stroke="#176d70" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M477 254v21M467 264h21" stroke="#ff8c52" stroke-width="3" stroke-linecap="round" />
+                <circle cx="114" cy="185" r="6" fill="#ff8c52" />
+                <path d="M104 402h362" stroke="#d9e6e4" stroke-width="2" stroke-linecap="round" />
+            </svg>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Log In — TimeBank</title>
+    <link rel="icon" href="../../../Assets/Logo/timebank-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../auth.css">
+    <script src="../../../js/include.js" defer></script>
+    <script src="../../../js/auth.js" defer></script>
+    <script src="../auth.js" defer></script>
+</head>
+<body class="auth-page">
+    <header class="auth-header">
+        <a href="../../../index.html" data-site-href="index.html#hero" aria-label="TimeBank Home"><img class="auth-logo" src="../../../Assets/Logo/timebank-wordmark-color.png" width="2172" height="724" alt="TimeBank"></a>
+        <a class="auth-back" href="../../../index.html" data-site-href="index.html#hero"><span aria-hidden="true">←</span> Back to Home</a>
+    </header>
+    <main class="site-container auth-layout">
+        <section class="auth-intro" aria-labelledby="auth-title">
+            <span class="site-eyebrow">Learn · Teach · Grow together</span>
+            <h1 id="auth-title">Welcome back to <span class="auth-accent">TimeBank.</span></h1>
+            <p class="site-lead">Continue learning, teaching, and connecting with people who love to share what they know.</p>
+            <div class="auth-value"><strong>A little time. New possibilities.</strong><p>One account to learn new skills and share your own.</p></div>
+        </section>
+        <section class="auth-card" aria-labelledby="form-title">
+            <h2 id="form-title">Log In</h2>
+            <p class="auth-description">Welcome back! Log in to continue your TimeBank journey.</p>
+            <div class="auth-message" role="status" aria-live="polite" hidden></div>
+            <form class="auth-form" data-auth-form="login" novalidate>
+                <div class="auth-field">
+                    <label for="email">Email address</label>
+                    <input id="email" name="email" type="email" autocomplete="username" placeholder="you@example.com" maxlength="190" required aria-describedby="email-error">
+                    <p class="auth-error" id="email-error" hidden></p>
+                </div>
+                <div class="auth-field">
+                    <label for="password">Password</label>
+                    <div class="auth-password"><input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required aria-describedby="password-error"><button type="button" data-password-toggle="password" aria-label="Show password" aria-pressed="false">Show</button></div>
+                    <p class="auth-error" id="password-error" hidden></p>
+                </div>
+                <button class="site-button auth-submit" type="submit">Log In <span aria-hidden="true">→</span></button>
+            </form>
+            <p class="auth-switch">Don’t have an account? <a href="../Register/" data-site-href="Pages/Auth/Register/">Create one.</a></p>
+            <noscript><p class="auth-help">Enable JavaScript to use this login form.</p></noscript>
+        </section>
+    </main>
+</body>
+</html>

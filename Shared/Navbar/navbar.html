@@ -1,9 +1,45 @@
 <header class="site-navbar">
-    <a href="#hero" class="site-brand" aria-label="TimeBank Home">
+    <a href="./index.html#hero" data-site-href="index.html#hero" class="site-brand" aria-label="TimeBank Home">
         <img
-            src="./Assets/Logo/timebank-logomark.png"
+            src="./Assets/Logo/timebank-wordmark-color.png"
+            data-site-src="Assets/Logo/timebank-wordmark-color.png"
             alt="TimeBank"
             class="site-logo"
+            width="2172" height="724"
         >
     </a>
+    <button class="site-menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation">
+        <img src="./Assets/Icons/menu.svg" data-site-src="Assets/Icons/menu.svg" width="24" height="24" alt="" aria-hidden="true">
+    </button>
+    <nav class="site-navigation" id="site-navigation" aria-label="Main navigation">
+        <div class="site-nav-links" data-public-links>
+            <a class="site-nav-link" href="./index.html#hero" data-site-href="index.html#hero" aria-current="page">Home</a>
+            <a class="site-nav-link" href="./Pages/Explore/" data-site-href="Pages/Explore/">Explore Skills</a>
+            <a class="site-nav-link" href="./index.html#about" data-site-href="index.html#about">How It Works</a>
+        </div>
+        <div class="site-nav-actions" data-public-actions hidden>
+            <a class="site-nav-link" href="./Pages/Auth/Login/" data-site-href="Pages/Auth/Login/">Log In</a>
+            <a class="site-button" href="./Pages/Auth/Register/" data-site-href="Pages/Auth/Register/">Get Started <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="site-nav-links" data-member-links hidden>
+            <a class="site-nav-link" data-site-href="Pages/Member/Dashboard/" href="./Pages/Member/Dashboard/">Dashboard</a>
+            <a class="site-nav-link" data-site-href="Pages/Explore/" href="./Pages/Explore/">Explore Skills</a>
+            <a class="site-nav-link" data-site-href="Pages/Member/Sessions/" href="./Pages/Member/Sessions/">My Sessions</a>
+            <a class="site-nav-link" data-site-href="Pages/Member/Schedule/" href="./Pages/Member/Schedule/">My Schedule</a>
+        </div>
+        <div class="site-nav-actions site-member-actions" data-member-actions hidden>
+            <a class="site-wallet" data-site-href="Pages/Member/Wallet/" href="./Pages/Member/Wallet/" aria-label="Time Wallet"><span class="site-wallet-value" data-wallet-balance></span><span class="site-wallet-label">Time Credits</span></a>
+            <div class="site-profile">
+                <button class="site-profile-toggle" type="button" aria-expanded="false" aria-controls="site-profile-links"><span class="site-profile-avatar" aria-hidden="true" data-user-initial></span><span class="site-profile-name" data-user-name></span><span aria-hidden="true">⌄</span></button>
+                <div class="site-profile-links" id="site-profile-links" hidden>
+                    <a data-site-href="Pages/Member/Profile/" href="./Pages/Member/Profile/">My Profile</a>
+                    <a data-site-href="Pages/Member/Skills/" href="./Pages/Member/Skills/">My Skills</a>
+                    <a data-site-href="Pages/Member/Wallet/" href="./Pages/Member/Wallet/">Time Wallet</a>
+                    <a data-site-href="Pages/Member/Settings/" href="./Pages/Member/Settings/">Account Settings</a>
+                    <button class="site-logout" type="button">Log Out</button>
+                </div>
+            </div>
+        </div>
+        <div class="site-auth-status" role="status" aria-live="polite"><span data-auth-message>Checking account…</span><button type="button" class="site-auth-retry" hidden>Retry</button></div>
+    </nav>
 </header>

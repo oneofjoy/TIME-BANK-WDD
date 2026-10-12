@@ -1,0 +1,12 @@
+﻿.cta-section { padding-top: 0; }
+.cta-panel { position: relative; padding: 80px 64px; border-radius: var(--radius-panel); background: var(--brand-cream); text-align: center; overflow: hidden; }
+.cta-panel h2 { position: relative; z-index: 1; max-width: 25ch; margin-inline: auto; }
+.cta-panel .site-lead { position: relative; z-index: 1; margin-top: 24px; }
+.cta-panel .site-button { position: relative; z-index: 1; margin-top: 32px; }
+.cta-spark { position: absolute; width: 42px; height: 42px; color: var(--brand-teal); transition: transform 300ms var(--motion-ease); }
+.cta-spark--left { left: 6%; top: 27%; }
+.cta-spark--right { right: 6%; bottom: 20%; color: #b94c1d; }
+.cta-panel:hover .cta-spark--left { transform: rotate(15deg); }
+.cta-panel:hover .cta-spark--right { transform: rotate(-15deg); }
+@media (max-width: 1023px) { .cta-panel { padding: 64px 48px; } .cta-spark { width: 30px; height: 30px; } .cta-spark--left { top: 14%; left: 4%; } .cta-spark--right { right: 4%; bottom: 12%; } }
+@media (max-width: 639px) { .cta-panel { padding: 48px 24px; } .cta-panel .site-eyebrow { font-size: 11px; } .cta-panel .site-lead { font-size: 16px; } .cta-spark { display: none; } }

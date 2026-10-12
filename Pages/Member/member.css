@@ -1,0 +1,10 @@
+.member-page { display: flex; flex-direction: column; min-height: 100vh; }
+.member-page #navbar-mount { flex-shrink: 0; }
+.member-main { flex: 1; padding-block: 64px 80px; }
+.member-main h1 { font-size: clamp(32px, 4vw, 48px); }
+.member-placeholder { margin-top: 32px; padding: 48px; border: 1px solid var(--color-border); border-radius: var(--radius-panel); background: var(--color-surface-soft); }
+.member-placeholder h2 { font-size: 26px; }
+.member-placeholder p { margin-top: 16px; max-width: 60ch; color: var(--color-text-muted); }
+.member-placeholder .site-button { margin-top: 24px; }
+.member-status { margin-top: 24px; color: #b42318; }
+@media (max-width: 639px) { .member-main { padding-block: 40px 48px; } .member-placeholder { padding: 24px; border-radius: 20px; } }
