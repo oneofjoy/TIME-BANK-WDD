@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__ . '/database.php';
+require_once __DIR__ . '/avatars.php';
 
 ini_set('display_errors', '0');
 ini_set('session.use_strict_mode', '1');
@@ -62,13 +63,13 @@ function post_data(): array
         respond(403, false, 'Your request has expired. Refresh the page and try again.');
     }
     if (!str_starts_with(strtolower($_SERVER['CONTENT_TYPE'] ?? ''), 'application/json')) {
-        respond(415, false, 'Send JSON form data.');
+        respond(415, false, 'We couldn’t read this form. Refresh the page and try again.');
     }
     $raw = file_get_contents('php://input', false, null, 0, 65537);
-    if (strlen($raw) > 65536) respond(413, false, 'The request is too large.');
+    if (strlen($raw) > 65536) respond(413, false, 'This form is too large. Please shorten your text.');
     try { $data = json_decode($raw, true, 32, JSON_THROW_ON_ERROR); }
     catch (JsonException $error) { respond(400, false, 'The request could not be read.'); }
-    if (!is_array($data) || array_is_list($data) && $data !== []) respond(400, false, 'Invalid form data.');
+    if (!is_array($data) || array_is_list($data) && $data !== []) respond(400, false, 'We couldn’t read this form. Refresh the page and try again.');
     return $data;
 }
 
@@ -77,8 +78,9 @@ function current_user(): ?array
     $id = $_SESSION['user']['user_id'] ?? null;
     if (!$id) return null;
     $statement = database()->prepare(
-        'SELECT u.user_id, u.full_name, u.role, u.account_status, w.available_credits
-         FROM users u LEFT JOIN wallets w ON w.user_id = u.user_id WHERE u.user_id = ?'
+        'SELECT u.user_id, u.full_name, u.username, u.role, u.account_status, w.available_credits, p.avatar_path
+         FROM users u LEFT JOIN wallets w ON w.user_id = u.user_id
+         LEFT JOIN user_profiles p ON p.user_id=u.user_id WHERE u.user_id = ?'
     );
     $statement->execute([$id]);
     $user = $statement->fetch();
@@ -88,6 +90,7 @@ function current_user(): ?array
     }
     unset($user['account_status']);
     $user['user_id'] = (int)$user['user_id'];
+    $user['avatar_path'] = safe_avatar_path($user['avatar_path']);
     $_SESSION['user'] = $user;
     return $user;
 }

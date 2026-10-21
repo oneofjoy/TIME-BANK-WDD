@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Explore Skills — TimeBank</title>
+    <meta name="description" content="Discover new skills and learn from our community. Browse TimeBank classes by keyword and category.">
+    <link rel="icon" href="../../Assets/Logo/timebank-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link id="explore-fonts" data-site-fonts href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" media="print">
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../Shared/Navbar/navbar.css?v=20261021-daily-avatar-1">
+    <link rel="stylesheet" href="../../Shared/Footer/footer.css">
+    <link rel="stylesheet" href="./explore.css?v=20261021-final-1">
+    <script src="../../js/include.js?v=20261021-starter-cancel-1" defer></script>
+    <script src="../../js/auth.js?v=20261021-1" defer></script>
+    <script src="../../Shared/Navbar/navbar.js?v=20261021-daily-avatar-1" defer></script>
+    <script src="./explore.js?v=20261021-final-1" defer></script>
+</head>
+<body class="explore-page">
+    <a class="site-skip-link" href="#main-content">Skip to content</a>
+    <div id="navbar-mount"></div>
+    <main id="main-content" class="site-container explore-main">
+        <header class="explore-header">
+            <h1><span class="explore-heading-accent" aria-hidden="true"></span>Explore Skills</h1>
+            <p class="site-lead">Discover new skills and learn from our community.</p>
+        </header>
+        <form class="explore-filters" role="search" aria-label="Search classes">
+            <div class="explore-field explore-search-field">
+                <label for="explore-search">Search skills</label>
+                <div class="explore-search-wrap">
+                    <span class="explore-search-icon" aria-hidden="true"></span>
+                    <input id="explore-search" name="q" type="search" placeholder="Search for skills..." maxlength="120" autocomplete="off">
+                </div>
+            </div>
+            <div class="explore-field">
+                <label for="explore-category">Category</label>
+                <select id="explore-category" name="category">
+                    <option value="">All</option>
+                    <option value="programming">Programming</option>
+                    <option value="design">Design</option>
+                    <option value="languages">Languages</option>
+                    <option value="data-analysis">Data Analysis</option>
+                    <option value="business">Business</option>
+                    <option value="other-skills">Others</option>
+                </select>
+            </div>
+        </form>
+        <div class="explore-results-bar">
+            <p id="explore-results-count" role="status" aria-live="polite" aria-atomic="true">Loading classes…</p>
+            <button class="explore-clear" type="button" disabled>Clear filters</button>
+        </div>
+        <section class="explore-catalog" aria-label="Classes" aria-busy="true">
+            <div class="explore-grid" id="explore-grid"></div>
+            <div class="explore-state" id="explore-state">
+                <img class="explore-state-icon" src="../../Assets/Icons/learn.svg" width="40" height="40" alt="">
+                <h2 id="explore-state-title">Loading classes…</h2>
+                <p id="explore-state-description">Getting the latest classes.</p>
+                <button class="site-button site-button--secondary explore-retry" type="button" hidden>Try again</button>
+            </div>
+        </section>
+        <noscript><p class="explore-noscript">Enable JavaScript to search and browse classes.</p></noscript>
+    </main>
+    <dialog class="explore-booking-dialog" id="explore-booking" aria-labelledby="booking-title">
+        <div class="explore-booking-heading"><h2 id="booking-title">Join Class</h2><button type="button" data-close-booking aria-label="Close class booking">×</button></div>
+        <p data-booking-class></p><p class="explore-booking-help">Choose a time for a private lesson. All times are in Jakarta time (WIB).</p>
+        <form id="explore-booking-form">
+            <p class="explore-booking-message" data-booking-message role="status" hidden></p>
+            <button class="site-button site-button--secondary" type="button" data-retry-booking hidden>Refresh Times</button>
+            <label for="booking-time">Teaching time</label>
+            <select id="booking-time" name="availability_id" required disabled><option value="">Loading times…</option></select>
+            <p class="explore-booking-help" data-booking-cost></p>
+            <p class="explore-booking-help">Your credits are reserved when you join and sent to the tutor after you confirm the session is complete.</p>
+            <div class="explore-booking-actions"><button class="site-button" type="submit" disabled>Join Class</button><button class="site-button site-button--secondary" type="button" data-close-booking>Go Back</button></div>
+        </form>
+    </dialog>
+    <div id="footer-mount"></div>
+    <!-- Local catalog snapshot: start -->
+    <script type="application/json" id="explore-local-catalog">{"offerings":[]}</script>
+    <!-- Local catalog snapshot: end -->
+</body>
+</html>

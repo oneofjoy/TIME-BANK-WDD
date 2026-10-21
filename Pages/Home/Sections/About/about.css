@@ -78,15 +78,6 @@
     background: rgb(138 214 209 / 13%);
 }
 
-.about-orbit-track::after {
-    content: '\21bb';
-    position: absolute;
-    top: 9%;
-    right: 12%;
-    color: var(--color-primary-action);
-    font-size: 24px;
-}
-
 .about-center {
     position: absolute;
     z-index: 2;

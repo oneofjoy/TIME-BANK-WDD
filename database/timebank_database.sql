@@ -14,12 +14,14 @@ USE timebank_db;
 CREATE TABLE IF NOT EXISTS users (
     user_id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     full_name VARCHAR(120) NOT NULL,
+    username VARCHAR(30) NOT NULL,
     email VARCHAR(190) NOT NULL UNIQUE,
     password_hash VARCHAR(255) NOT NULL,
     role ENUM('member', 'admin') NOT NULL DEFAULT 'member',
     account_status ENUM('active', 'suspended') NOT NULL DEFAULT 'active',
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    UNIQUE KEY uq_users_username (username)
 ) ENGINE=InnoDB;
 
 -- 2. Member public profile
